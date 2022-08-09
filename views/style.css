@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+  }
+
+
+body{
+    margin: 0px 20px 20px 20px;
+    background-color: grey;
+}
+
+
+h1{
+    font-size: 3rem;
+    font-family:sans-serif;
+    text-align: center;
+    
+}
+
+input{
+    font-size: 1.5rem;
+    background:transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    
+}
+
+
+/* styling container */
+
+.container {
+    background-color: #eee;
+    width: 60%;
+    min-height: 80%;
+    margin: 0 auto;
+   
+  }
+
+.todo-container{
+    width: 100%;
+    background-color: #eee;
+  }
+
+.table{
+    width: 95%;
+    background-color:lightgrey ;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    margin: 2rem;
+}
+.table-function{
+    
+    font-size: 2rem;
+    text-align: left;
+  }
+
+.table-entry{
+    background-color: #eee;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.table th {
+    padding: 1rem;
+}
+
+.table td{
+    padding: 1rem;
+}
+
+
+ /* style for add button */
+.btn-add{
+    background-color: green;
+    color: white;
+    padding: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-add:hover{
+    color: black;
+    background-color: white;
+  }
+
+
+  .container h1 {
+    text-align: center;
+    margin-bottom: 12px;
+
+  }
+
+  .container .row {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+  }
+
+
+  select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+
+  
+
+    /* for all li elements */
+    li {
+        padding: 20px;
+        font-size: 1rem;
+        position: relative;
+        border-top: 1px solid gray;
+        transition: all 1s;
+      }
+      
+      
+
+  .todo__dueDate {
+    display: block;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  
+  
+  /* tasklist items colors */
+  .list{
+      background-color: whitesmoke;
+      color: black;
+      box-shadow: #eee;
+  }
+
+ /* style for delete button */
+  .btn-delete{
+    color: white;
+    background-color:#cb0303;
+    padding: 1rem;
+    width: 10rem;
+    margin-left: 40%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    
+  }
+
+  .btn-delete:hover{
+    color: black;
+    background-color: white;
+  }
+
+  @media screen {
+    .container{
+        min-width: 720px;
+    }
+  }
+

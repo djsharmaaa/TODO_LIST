@@ -1,0 +1,80 @@
+<html>
+    <head>
+            <title>
+                <%= title %>
+            </title>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+            <link rel="stylesheet" href="./style.css">
+    </head>
+    <!-- <script src=" https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+    <body>
+        <div class="container">
+        <h1  >TODO APP</h1>
+
+        <!-- Form for creating the todo list -->
+        <form action="create-todo" method="post">
+            <table class="table">
+                <thead>
+                    <tr class="table-function">
+                        <th>DESCRIPTION</th>
+                        <th>CATEGORY</th>
+                        <th>DUE DATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-entry">
+                        <td><input type="text" name="description" placeholder="what do you need to do"></td>
+                        <td>
+                            <select name="category" required>
+                                <option>PERSONAL </option>
+                                <option>SCHOOL</option>
+                                <option>HOME</option>
+                                <option>EXTRA</option>
+                              </select>
+                        </td>
+                        <td><input type="date" name="date" required></td>
+                        <td><input type="submit" class=" btn-add" id="add" value="ADD"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <div id="todo-container">
+            <h1>
+                LIST TO DO
+            </h1>
+            <form action="/delete-todo" method="get">
+                <table class="table">
+                    <thead>
+                        <tr class="table-function">
+                            <th>Select</th>
+                            <th>Tasks</th>
+                            <th>Category</th>
+                            <th>Due date</th>
+                        </tr>
+                    </thead>
+                    <% for(let i of todo) { %>
+
+                        <tr class="list">
+                            <td> <input type="checkbox" name="<%= i._id %>" ></td>
+                            <td> <p id="task-description"><%= i.description %></td>
+                             <td><p id="task-category"></p>: <%= i.category %></td>
+                             <td><p id="due-date">: <%= i.date %></p></td>
+
+                        </tr>
+                        <% } %>
+                </table>
+                <div><input type="submit" class="btn-delete" value="DELETE TASK">
+                    
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    </body>
+</html>
